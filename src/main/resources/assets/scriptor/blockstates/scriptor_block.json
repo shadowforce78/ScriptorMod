@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "scriptor:block/scriptor_block"
+    }
+  }
+}

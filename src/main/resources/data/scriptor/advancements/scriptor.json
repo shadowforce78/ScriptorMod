@@ -1,0 +1,31 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "scriptor:scriptor_block"
+    },
+    "title": {
+      "translate": "advancements.scriptor.title"
+    },
+    "description": {
+      "translate": "advancements.scriptor.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "scriptor": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "scriptor:scriptor_block"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 999
+  }
+}

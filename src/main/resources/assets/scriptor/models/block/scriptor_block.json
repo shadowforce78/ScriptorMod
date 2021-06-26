@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "scriptor:blocks/scriptorblock",
+    "up": "scriptor:blocks/scriptorblock",
+    "north": "scriptor:blocks/scriptorblock",
+    "east": "scriptor:blocks/scriptorblock",
+    "south": "scriptor:blocks/scriptorblock",
+    "west": "scriptor:blocks/scriptorblock",
+    "particle": "scriptor:blocks/scriptorblock"
+  }
+}

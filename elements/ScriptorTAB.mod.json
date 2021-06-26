@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Scriptor TAB",
+    "icon": {
+      "value": "Blocks.BARRIER"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "ScriptorBLOCK",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scriptor_block"
+    },
+    {
+      "name": "ScriptorTAB",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scriptor_tab"
+    },
+    {
+      "name": "Scriptor",
+      "type": "achievement",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scriptor"
+    },
+    {
+      "name": "ScriptorGUI",
+      "type": "gui",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scriptor_gui"
+    },
+    {
+      "name": "Slot1",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slot_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "advancements.scriptor.descr": "Making a script block",
+      "itemGroup.tabscriptor_tab": "Scriptor TAB",
+      "block.scriptor.scriptor_block": "Script Block",
+      "advancements.scriptor.title": "Scriptor"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "scriptor",
+    "modName": "Scriptor",
+    "version": "1.0.0",
+    "author": "adamp, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.scriptor",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}
