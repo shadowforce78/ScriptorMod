@@ -7,21 +7,17 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
 
 import net.mcreator.scriptor.gui.ScriptorGUIGui;
 import net.mcreator.scriptor.ScriptorModElements;
 import net.mcreator.scriptor.ScriptorMod;
 
-import java.util.function.Supplier;
 import java.util.Map;
 
 import io.netty.buffer.Unpooled;
@@ -78,18 +74,6 @@ public class Slot1Procedure extends ScriptorModElements.ModElement {
 						return new ScriptorGUIGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
-			}
-		}
-		if (entity instanceof PlayerEntity) {
-			Container _current = ((PlayerEntity) entity).openContainer;
-			if (_current instanceof Supplier) {
-				Object invobj = ((Supplier) _current).get();
-				if (invobj instanceof Map) {
-					ItemStack _setstack = new ItemStack(Blocks.DIAMOND_BLOCK, (int) (1));
-					_setstack.setCount((int) 999);
-					((Slot) ((Map) invobj).get((int) (0))).putStack(_setstack);
-					_current.detectAndSendChanges();
-				}
 			}
 		}
 	}

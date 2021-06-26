@@ -28,6 +28,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
+import net.mcreator.scriptor.procedures.ExchangeButtonProcedure;
+import net.mcreator.scriptor.block.ScriptorBLOCKBlock;
 import net.mcreator.scriptor.ScriptorModElements;
 import net.mcreator.scriptor.ScriptorMod;
 
@@ -114,6 +116,10 @@ public class ScriptorGUIGui extends ScriptorModElements.ModElement {
 				}
 			}
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 38, 41) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(ScriptorBLOCKBlock.block, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 121, 41) {
 				@Override
@@ -368,6 +374,17 @@ public class ScriptorGUIGui extends ScriptorModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ExchangeButtonProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {
